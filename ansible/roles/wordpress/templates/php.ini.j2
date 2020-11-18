@@ -1,0 +1,140 @@
+[PHP]
+engine = On
+short_open_tag = Off
+asp_tags = Off
+precision = 14
+output_buffering = 4096
+zlib.output_compression = Off
+implicit_flush = Off
+serialize_precision = 17
+
+disable_functions = pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,
+
+zend.enable_gc = On
+
+expose_php = Off
+
+max_execution_time = 30
+max_input_time = 60
+memory_limit = 128M
+error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
+display_errors = Off
+display_startup_errors = Off
+log_errors = On
+log_errors_max_len = 1024
+ignore_repeated_errors = Off
+ignore_repeated_source = Off
+report_memleaks = On
+track_errors = Off
+html_errors = On
+variables_order = "GPCS"
+request_order = "GP"
+register_argc_argv = Off
+auto_globals_jit = On
+post_max_size = 8M
+default_mimetype = "text/html"
+enable_dl = Off
+cgi.fix_pathinfo=0
+upload_max_filesize = 2M
+max_file_uploads = 20
+allow_url_fopen = On
+allow_url_include = Off
+default_socket_timeout = 60
+cli_server.color = On
+[sqlite]
+[sqlite3]
+[Pcre]
+[Pdo]
+[Pdo_mysql]
+pdo_mysql.cache_size = 2000
+[Phar]
+[mail function]
+; For Win32 only.
+; http://php.net/smtp
+SMTP = localhost
+; http://php.net/smtp-port
+smtp_port = 25
+mail.add_x_header = On
+[SQL]
+; http://php.net/sql.safe-mode
+sql.safe_mode = Off
+
+[ODBC]
+; http://php.net/odbc.default-db
+;odbc.default_db    =  Not yet implemented
+odbc.allow_persistent = On
+odbc.check_persistent = On
+odbc.max_persistent = -1
+odbc.max_links = -1
+odbc.defaultlrl = 4096
+odbc.defaultbinmode = 1
+[Interbase]
+; Allow or prevent persistent links.
+ibase.allow_persistent = 1
+; Maximum number of persistent links.  -1 means no limit.
+ibase.max_persistent = -1
+
+; Maximum number of links (persistent + non-persistent).  -1 means no limit.
+ibase.max_links = -1
+; Default timestamp format.
+ibase.timestampformat = "%Y-%m-%d %H:%M:%S"
+
+; Default date format.
+ibase.dateformat = "%Y-%m-%d"
+
+; Default time format.
+ibase.timeformat = "%H:%M:%S"
+
+[MySQL]
+; Allow accessing, from PHP's perspective, local files with LOAD DATA statements
+; http://php.net/mysql.allow_local_infile
+mysql.allow_local_infile = On
+
+; Allow or prevent persistent links.
+; http://php.net/mysql.allow-persistent
+mysql.allow_persistent = On
+
+; If mysqlnd is used: Number of cache slots for the internal result set cache
+; http://php.net/mysql.cache_size
+mysql.cache_size = 2000
+
+; Maximum number of persistent links.  -1 means no limit.
+; http://php.net/mysql.max-persistent
+mysql.max_persistent = -1
+
+; Maximum number of links (persistent + non-persistent).  -1 means no limit.
+; http://php.net/mysql.max-links
+mysql.max_links = -1
+
+; Maximum time (in seconds) for connect timeout. -1 means no limit
+; http://php.net/mysql.connect-timeout
+mysql.connect_timeout = 60
+
+; Trace mode. When trace_mode is active (=On), warnings for table/index scans and
+; SQL-Errors will be displayed.
+; http://php.net/mysql.trace-mode
+mysql.trace_mode = Off
+
+[MySQLi]
+
+; Maximum number of persistent links.  -1 means no limit.
+; http://php.net/mysqli.max-persistent
+mysqli.max_persistent = -1
+mysqli.allow_persistent = On
+mysqli.max_links = -1
+mysqli.cache_size = 2000
+mysqli.default_port = 3306
+; Allow or prevent reconnect
+mysqli.reconnect = Off
+
+[mysqlnd]
+; Enable / Disable collection of general statistics by mysqlnd which can be
+; used to tune and monitor MySQL operations.
+; http://php.net/mysqlnd.collect_statistics
+mysqlnd.collect_statistics = On
+mysqlnd.collect_memory_statistics = Off
+
+
+
+
+

@@ -1,0 +1,40 @@
+---
+- name: update server
+  apt: update_cache=yes
+
+- name: add PHP7.0 PPA Repository
+  become: true 
+  apt_repository:
+    repo: "ppa:ondrej/php"
+    state: present
+
+- name: Install PHP7-FPM
+  become: true
+  apt: 
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - php7.2-fpm
+    - php7.2-cgi
+    - php7.2-cli
+    - php7.2-curl
+    - php7.2-json
+    - php7.2-odbc
+    - php7.2-tidy
+    - php7.2-common
+    - php7.2-xmlrpc
+    - php7.2-gd
+    - php-pear
+    - php7.2-dev
+    - php7.2-imap
+    - php7.2-mysqlnd
+
+- name: Copy the custom settings
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items:
+    - { src: 'www.conf.j2', dest: '/etc/php/7.2/fpm/pool.d/www.conf' }
+    - { src: 'php.ini.j2', dest: '/etc/php/7.2/fpm/php.ini' }
+  notify:
+    - Restart PHP7-FPM

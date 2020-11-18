@@ -1,0 +1,4 @@
+---
+- include: php7.yml
+- include: nginx.yml
+- include: deploy.yml
