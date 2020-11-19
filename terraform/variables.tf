@@ -11,11 +11,11 @@ variable "azs" {
 }
 
 variable "aws_access_key" {
-    default = "AKIAIOXV2XLSIGX6YVZQ"
+    default = "xxxxxxxxxxxxxxxxxxxx"
 }
 
 variable "aws_secret_key" {
-    default = "kDUVNe9TqNDP/L6EAZ3hr63tufVOLVSj2bYIIZUq" 
+    default = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" 
 }
 
 variable "aws_key_path" { 
