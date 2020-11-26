@@ -50,7 +50,7 @@ Once the Terraform create all the resources over AWS, it will use ansible to ins
 
 Playbook
 
-# change database settings in role/wordpress/defaults/main.yml
+change database settings in role/wordpress/defaults/main.yml 
 db_hostname: "instance_address"    A recupere de l'instance RDS
 db_name: "mybd"
 db_username: "foo"
@@ -59,7 +59,7 @@ db_password: "hypersecret"
 #ip address of EC2  in inventory file
 @ip instance web 
 
-# configuration in ansible.configuration with path to the ssh key and the user
+configuration in ansible.configuration with path to the ssh key and the user
 inventory = ./inventory
 private_key_file = ../key_pair
 remote_user = ubuntu
