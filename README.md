@@ -51,10 +51,10 @@ Once the Terraform create all the resources over AWS, it will use ansible to ins
 2. Playbook
 
 change database settings in role/wordpress/defaults/main.yml 
-db_hostname: "instance_address"    A recupere de l'instance RDS
-db_name: "mybd"
-db_username: "foo"
-db_password: "hypersecret"
+db_hostname: "instance_address"    from RDS instance
+db_name: "xxxxx"
+db_username: "xxxxx"
+db_password: "xxxxxxxxxx"
 
 #ip address of EC2  in inventory file
 @ip instance web 
