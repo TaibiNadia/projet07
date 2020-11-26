@@ -9,16 +9,14 @@ It will also create the Elastic Load Balancer and add the EC2 instance(s) automa
 Resources
 Create a VPC with 4x VPC subnets (2x public and 2x private) in different AZ zones inside the AWS region
 Create one specific security group only acesible from ec2 instances and not from public load balancing dns address 22
-Create one specific security group for ec2 from bastion and load balancer
 Create one specific security group for rds 3306 (not public internet facing, only from vpc)
 Create one specific security group for load balancer on port 80
-Provision ec2 instances with default ubuntu ami in 2 different public AZ
+Provision ec2 instances with default ubuntu 14.04 LTS ami in 2 different public AZ
 Provision one RDS instance in private subnets
 Launch and configure public facing VPC LB (cross_az_load_balancing) and attach VPC subnets
 Register EC2 instances on LB
 
 Tools used
-
 ansible --version
 ansible 2.9.14
 terraform version
