@@ -18,7 +18,7 @@ It will also create the Elastic Load Balancer and add the EC2 instance(s) automa
 - Launch and configure public facing VPC LB (cross_az_load_balancing) and attach VPC subnets
 - Register EC2 instances on LB
 
-######Tools used:
+##### Tools used:
 ```
 ansible --version
 ansible 2.9.6
@@ -34,7 +34,7 @@ export AWS_SECRET_ACCESS_KEY="yyyyyyyyyyyyyyyyyyyy"
 
 or use it with AWS CLI configuration.
 
-#####1. Infrastructure:
+##### 1. Infrastructure:
 
 Initialize terraform: 
 ```
@@ -70,7 +70,7 @@ Note: Terraform stores the state of the managed infrastructure from the last tim
 
 Once the Terraform create all the resources over AWS, it will use ansible to install the wordpress over the EC2 instance(s).
 
-#####2. Ansible
+##### 2. Ansible
 
 Change database DB_HOSTNAME in ansible/site.yml 
 Change bastion IP address and web IP address in ansible/inventory.yml
