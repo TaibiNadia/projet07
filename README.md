@@ -18,7 +18,7 @@ It will also create the Elastic Load Balancer and add the EC2 instance(s) automa
 - Launch and configure public facing VPC LB (cross_az_load_balancing) and attach VPC subnets
 - Register EC2 instances on LB
 
-#####Tools used:
+######Tools used:
 ```
 ansible --version
 ansible 2.9.6
