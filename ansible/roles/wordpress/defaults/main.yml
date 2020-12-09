@@ -7,7 +7,7 @@ WEBSITE_NAME: "localwebsite"
 #DB_USERNAME: "root"
 #DB_PASSWORD: ""
 
-DB_HOSTNAME: "terraform-20201116103125744100000001.cuwbzm2mifvp.eu-west-3.rds.amazonaws.com"
+DB_HOSTNAME: "toto"
 DB_NAME: "mydb"
 DB_USERNAME: "foo"
 DB_PASSWORD: "hypersecret"

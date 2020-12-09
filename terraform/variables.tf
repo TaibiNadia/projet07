@@ -1,29 +1,29 @@
 variable "name" {
-    default = "test"
+  default = "test"
 }
 
 variable "environment" {
-    default = "test"
+  default = "test"
 }
 variable "azs" {
-     description = "AZ for subnets"
-     default = "eu-west-3a,eu-west-3b" 
+  description = "AZ for subnets"
+  default     = "eu-west-3a,eu-west-3b"
 }
 
 variable "aws_access_key" {
-    default = "xxxxxxxxxxxxxxxxxxx"
+  default = "xxxxxxxxxxxxx"
 }
 
 variable "aws_secret_key" {
-    default = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" 
+  default = "yyyyyyyyyyyyyyyyyyyyyy"
 }
 
-variable "aws_key_path" { 
-    default = "/home/vagrant/"
+variable "aws_key_path" {
+  default = "/home/vagrant/"
 }
 
 variable "aws_key_name" {
-    default = "key_pair"
+  default = "key_pair"
 }
 
 variable "aws_region" {
@@ -51,7 +51,7 @@ variable "private_subnet_a_cidr" {
 }
 variable "private_subnet_b_cidr" {
   description = "CIDR for Private Subnet B"
-  default     = "10.0.2.0/24" 
+  default     = "10.0.2.0/24"
 }
 
 variable "private_subnets_cidr" {
