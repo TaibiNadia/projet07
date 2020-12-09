@@ -1,4 +1,4 @@
-Requirements:
+### Requirements:
 - Terraform
 - Ansible
 - AWS
@@ -7,7 +7,7 @@ The purpose is to automate the creation of the infrastructure and the setup of t
 
 It will also create the Elastic Load Balancer and add the EC2 instance(s) automatically that were created using ansible playbook.
 
-#####Resources:
+#### Resources:
 - Create a VPC with 4x VPC subnets (2x public and 2x private) in different AZ zones inside the AWS region
 - Create one specific security group for Bastion only accesible on port 22
 - Create one specific security group for EC2 wordpress only accessible from load balancer or bastion
@@ -18,7 +18,7 @@ It will also create the Elastic Load Balancer and add the EC2 instance(s) automa
 - Launch and configure public facing VPC LB (cross_az_load_balancing) and attach VPC subnets
 - Register EC2 instances on LB
 
-##### Tools used:
+#### Tools used:
 ```
 ansible --version
 ansible 2.9.6
@@ -34,7 +34,7 @@ export AWS_SECRET_ACCESS_KEY="yyyyyyyyyyyyyyyyyyyy"
 
 or use it with AWS CLI configuration.
 
-##### 1. Infrastructure:
+#### 1. Infrastructure:
 
 Initialize terraform: 
 ```
@@ -70,24 +70,24 @@ Note: Terraform stores the state of the managed infrastructure from the last tim
 
 Once the Terraform create all the resources over AWS, it will use ansible to install the wordpress over the EC2 instance(s).
 
-##### 2. Ansible
+#### 2. Ansible
 
 Change database DB_HOSTNAME in ansible/site.yml 
 Change bastion IP address and web IP address in ansible/inventory.yml
 Change bastion IP address in ansible/ssh.cfg
 
-###### Play-book:
+#### Play-book:
 Install the nginx: nginx.yml
 Install PHP7.2-FPM with modules: php7.yml
 Install wordpress: deploy.yml
 
 ansible-playbook site.yml
 
-###### Use custom connexion 
+#### Use custom connexion 
 
 `ssh -F ./ansible/ssh.cfg xx.xx.xx.xx`
 
-###### Launch Ansible
+#### Launch Ansible
 ```
 ansible-playbook site.yml
 ```
